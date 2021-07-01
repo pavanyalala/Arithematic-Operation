@@ -18,3 +18,9 @@ echo "a * b + c = ${compute[1]}"
 echo "c + a / b = ${compute[2]}"
 
 echo "a % b + c = ${compute[3]}"
+
+for((i=0; $i<=${#compute[@]}; i++))
+do
+	a[$i]=${compute[$i]}
+done
+echo Array value : ${a[@]}
