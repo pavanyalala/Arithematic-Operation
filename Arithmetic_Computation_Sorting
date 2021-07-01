@@ -7,3 +7,4 @@ compute[0]=$(((a+b)*c))
 
 compute[1]=$((a*(b+c)))
 
+compute[2]=$(((c+a)/b))
