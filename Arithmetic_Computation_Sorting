@@ -3,24 +3,29 @@ read -p " Enter a value " a
 read -p " Enter b value " b
 read -p " Enter c value " c
 
-compute[0]=$(((a+b)*c))
+compute[0]=$((a+(b*c)))
 
-compute[1]=$((a*(b+c)))
+compute[1]=$(((a*b)+c))
 
-compute[2]=$(((c+a)/b))
+compute[2]=$((c+(a/b)))
 
-compute[3]=$((a%(b+c)))
+compute[3]=$(((a%b)+c))
 
-echo "a + b * c = ${compute[0]}"
+	echo "a + b * c = ${compute[0]}"
 
-echo "a * b + c = ${compute[1]}"
+	echo "a * b + c = ${compute[1]}"
 
-echo "c + a / b = ${compute[2]}"
+	echo "c + a / b = ${compute[2]}"
 
-echo "a % b + c = ${compute[3]}"
+	echo "a % b + c = ${compute[3]}"
 
 for((i=0; $i<=${#compute[@]}; i++))
 do
 	a[$i]=${compute[$i]}
 done
-echo Array value : ${a[@]}
+	echo Array value : ${a[@]}
+	echo " Descending order "
+for((i=0; i<=${#a[@]}; i++))
+do
+	echo "${a[$i]}"
+done | sort -nr
