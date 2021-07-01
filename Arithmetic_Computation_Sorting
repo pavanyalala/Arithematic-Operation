@@ -10,3 +10,11 @@ compute[1]=$((a*(b+c)))
 compute[2]=$(((c+a)/b))
 
 compute[3]=$((a%(b+c)))
+
+echo "a + b * c = ${compute[0]}"
+
+echo "a * b + c = ${compute[1]}"
+
+echo "c + a / b = ${compute[2]}"
+
+echo "a % b + c = ${compute[3]}"
