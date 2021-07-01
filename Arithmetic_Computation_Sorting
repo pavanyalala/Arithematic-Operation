@@ -24,8 +24,34 @@ do
 	a[$i]=${compute[$i]}
 done
 	echo Array value : ${a[@]}
+
 	echo " Descending order "
+
 for((i=0; i<=${#a[@]}; i++))
 do
 	echo "${a[$i]}"
 done | sort -nr
+
+ echo " Ascending order  "
+for((i=0; i<=${#a[@]}; i++))
+do
+   echo "${a[$i]}"
+done | sort -n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
